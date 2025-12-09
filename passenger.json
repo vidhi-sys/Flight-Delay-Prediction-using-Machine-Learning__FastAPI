@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "F001": { "flight_number": 610,  "predicted_delay": 0, "probability": 0.41 },
   "F002": { "flight_number": 782,  "predicted_delay": 0, "probability": 0.39 },
@@ -23,3 +24,30 @@
   "F019": { "flight_number": 731,  "predicted_delay": 1, "probability": 0.61 },
   "F020": { "flight_number": 304,  "predicted_delay": 0, "probability": 0.44 }
 }
+=======
+{
+  "F001": { "flight_number": 610,  "predicted_delay": 0, "probability": 0.41 },
+  "F002": { "flight_number": 782,  "predicted_delay": 0, "probability": 0.39 },
+  "F003": { "flight_number": 126,  "predicted_delay": 1, "probability": 0.62 },
+  "F004": { "flight_number": 1760, "predicted_delay": 1, "probability": 0.71 },
+  "F005": { "flight_number": 489,  "predicted_delay": 1, "probability": 0.68 },
+
+  "F006": { "flight_number": 902,  "predicted_delay": 0, "probability": 0.46 },
+  "F007": { "flight_number": 315,  "predicted_delay": 1, "probability": 0.58 },
+  "F008": { "flight_number": 1470, "predicted_delay": 0, "probability": 0.43 },
+  "F009": { "flight_number": 223,  "predicted_delay": 1, "probability": 0.64 },
+  "F010": { "flight_number": 875,  "predicted_delay": 0, "probability": 0.37 },
+
+  "F011": { "flight_number": 452,  "predicted_delay": 0, "probability": 0.42 },
+  "F012": { "flight_number": 1309, "predicted_delay": 1, "probability": 0.66 },
+  "F013": { "flight_number": 611,  "predicted_delay": 0, "probability": 0.45 },
+  "F014": { "flight_number": 1897, "predicted_delay": 1, "probability": 0.72 },
+  "F015": { "flight_number": 995,  "predicted_delay": 1, "probability": 0.69 },
+
+  "F016": { "flight_number": 1403, "predicted_delay": 1, "probability": 0.75 },
+  "F017": { "flight_number": 227,  "predicted_delay": 0, "probability": 0.38 },
+  "F018": { "flight_number": 1985, "predicted_delay": 1, "probability": 0.79 },
+  "F019": { "flight_number": 731,  "predicted_delay": 1, "probability": 0.61 },
+  "F020": { "flight_number": 304,  "predicted_delay": 0, "probability": 0.44 }
+}
+>>>>>>> b61a57e240e391c82ce16b2327e647ee805833f8
