@@ -1,60 +1,56 @@
+# ✈️ Flight Delay Prediction
 
-# ✈️ Flight Delay Prediction using Machine Learning
+This project uses a machine learning model to **predict flight delays**, aiming to help airlines and passengers plan better.
 
-
-This project implements a machine learning model to **predict flight delays**, inspired by recent disruptions in domestic aviation and the growing need for operational decision support.  
-
-For example, as reported in [Times of India](https://timesofindia.indiatimes.com/city/patna/turmoil-at-city-airport-as-indigo-cancels-11-of-28-scheduled-flights/articleshow/125808652.cms)
-Indigo canceled 11 of 28 scheduled flights at multiple airport, highlighting the operational challenges that this project aims to address.
+Recently, as reported in [Times of India](https://timesofindia.indiatimes.com/city/patna/turmoil-at-city-airport-as-indigo-cancels-11-of-28-scheduled-flights/articleshow/125808652.cms), Indigo canceled 11 out of 28 scheduled flights at multiple airports. This highlights the real-world challenges that inspired this project.
 
 ## 📦 Dataset
 
 The model is trained on historical flight data from the U.S. DOT dataset on Kaggle:
 
-👉 [https://www.kaggle.com/datasets/usdot/flight-delays](https://www.kaggle.com/datasets/usdot/flight-delays)
+👉 [Flight Delays Dataset](https://www.kaggle.com/datasets/usdot/flight-delays)
 
 ## 🧠 Model Overview
 
-A **Random Forest Classifier** was used to classify delayed vs non-delayed flights.
+We used a **Random Forest Classifier** to predict whether a flight will be delayed or on time.
 
 The workflow includes:
 
-* Feature engineering and preprocessing
+* Preparing and cleaning the data
+* Feature engineering
 * Train–test split and evaluation
-* Delay probability estimation
-* Model export for deployment
+* Estimating delay probabilities
+* Exporting the model for deployment
 
-The model outputs:
+The model provides:
 
-* **Binary prediction**: Delayed / Not delayed
+* **Binary prediction**: Delayed / On time
 * **Probability score**: Likelihood of delay
 
-Most flights fall in the **0.40–0.60 probability range**, indicating moderate classifier confidence and a well-spread distribution — useful for operational insights.
+Most flights have probabilities around **0.40–0.60**, showing moderate classifier confidence—helpful for operational decisions.
 
 ## 🚀 Deployment
 
-The trained model has been serialized and the next step is **FastAPI integration** for real-time inference.
-A lightweight web interface will be added for user interaction.
+The model is integrated with **FastAPI** for real-time predictions. You can try it out here:
+
+👉 [Live App](https://flight-delay-prediction-tin5.onrender.com)
 
 ## 📁 Code
 
-Model notebook and export:
+The model notebook and code are available here:
 
-👉 [https://github.com/vidhi-sys/Flight-Delay-Prediction-using-Machine-Learning__FastAPI/blob/main/fastapi_ml_model.ipynb](https://github.com/vidhi-sys/Flight-Delay-Prediction-using-Machine-Learning__FastAPI/blob/main/fastapi_ml_model.ipynb)
+👉 [GitHub Notebook](https://github.com/vidhi-sys/Flight-Delay-Prediction-using-Machine-Learning__FastAPI/blob/main/fastapi_ml_model.ipynb)
 
-## 🔧 Future Enhancements
+## 🔧 Future Plans
 
-* FastAPI REST API interface
-* Live flight and weather data integration
-* Dashboard for real-time monitoring
+* Enhance the FastAPI interface
+* Integrate live flight and weather data
+* Build a dashboard for real-time monitoring
 
 ## 🤝 Contributions
 
-Feedback, suggestions, and collaboration are welcome!
+Suggestions, feedback, and collaboration are welcome!
 
 ---
 
-✈️🛫 ➜ ➜ ➜ 🛬
-
-Fly safe. Predict smarter.
-
+Plan smarter. Fly safer.
