@@ -4,11 +4,19 @@ from pydantic import BaseModel, Field
 from typing import Annotated, Literal, Optional
 import json
 import pickle
+from fastapi.middleware.cors import CORSMiddleware
 
 with open("model.pkl", "rb") as f:
     model = pickle.load(f)
 
 app = FastAPI()
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],   # allow all (OK for dev)
+    allow_credentials=True,
+    allow_methods=["*"],   # allow POST, GET, OPTIONS
+    allow_headers=["*"],
+)
 
 
 # Pydantic Models

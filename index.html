@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flight Delay Prediction</title>
+</head>
+<body>
+
+    <h1>Flight Delay Prediction System</h1>
+
+    <h2>Predict Flight Delay</h2>
+
+    <form id="predictForm">
+        <label>Flight Number:</label>
+        <input type="number" id="flight_number" required>
+        <br><br>
+        <button type="submit">Predict</button>
+    </form>
+
+    <h2>Prediction Result</h2>
+    <p id="result"></p>
+
+    <hr>
+
+    <h2>API Links</h2>
+    <ul>
+        <li><a href="http://127.0.0.1:8000/docs" target="_blank">Swagger Docs</a></li>
+        <li><a href="http://127.0.0.1:8000/view" target="_blank">View All Flights</a></li>
+    </ul>
+
+    <script>
+        const form = document.getElementById("predictForm");
+        const result = document.getElementById("result");
+
+        form.addEventListener("submit", async function (e) {
+            e.preventDefault();
+
+            const flightNumber = document.getElementById("flight_number").value;
+
+            const response = await fetch("http://127.0.0.1:8000/predict", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    flight_number: parseInt(flightNumber)
+                })
+            });
+
+            const data = await response.json();
+
+            if (data.predicted_delay === 1) {
+                result.innerHTML =
+                    "<span style='color:red; font-weight:bold;'>✖ Delayed</span><br>" +
+                    "Probability: " + data.probability;
+            } else {
+                result.innerHTML =
+                    "<span style='color:green; font-weight:bold;'>✔ On Time</span><br>" +
+                    "Probability: " + data.probability;
+            }
+        });
+    </script>
+<hr>
+</body>
+</html>
